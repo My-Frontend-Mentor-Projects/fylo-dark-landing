@@ -1,0 +1,165 @@
+.footer {
+    background-color: $darkBlueFooter;
+    padding-top: 16rem;
+    padding-bottom: 2.625rem;
+
+    @include breakpoint-up(medium) {
+        padding-top: 14rem;
+        padding-bottom: 5.625rem;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, max-content);
+        grid-template-areas: 
+        "footer-logo"
+        "footer-contact"
+        "footer-links"
+        "footer-social";
+        gap: 2.5rem;
+
+        @include breakpoint-up(large) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, max-content);
+            grid-template-areas: 
+            "footer-logo . ."
+            "footer-contact footer-links footer-social";
+            gap: 3.1235rem 8.75rem;
+        }
+    }
+
+    &-logo {
+        grid-area: footer-logo;
+        width: 11.125rem;
+    }
+
+    &-contact {
+        grid-area: footer-contact;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, max-content);
+        grid-template-areas:
+        "location"
+        "phone"
+        "email";
+        gap: 1.375rem;
+        padding-bottom: 2.5rem;
+
+        @include breakpoint-up(medium) {
+            grid-template-columns: repeat(2, max-content);
+            grid-template-rows: repeat(3, max-content);
+            grid-template-areas:
+            "location phone"
+            "location email";
+        }
+
+        div {
+            position: relative;
+            padding-left: 2.5rem;
+            max-width: 20.25rem;
+            
+            .gray-text {
+                filter: brightness(0.75);
+            }
+        }
+
+        .location {
+            grid-area: location;
+            line-height: 1.5;
+
+            @include breakpoint-up(medium) {
+                margin-right: 1.5rem;
+            }
+
+            @include breakpoint-up(large) {
+                margin-right: 4rem;
+            }
+        }
+
+        .phone {
+            grid-area: phone;
+        }
+
+        .email {
+            grid-area: email;
+        }
+        
+        .location::before {
+            content: url('/images/icon-location.svg');
+            position: absolute;
+            left: 0;
+            top: 0.2rem;
+        }
+
+        .phone::before {
+            content: url('/images/icon-phone.svg');
+            position: absolute;
+            left: 0;
+        }
+
+        .email::before {
+            content: url('/images/icon-email.svg');
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    &-links {
+        grid-area: footer-links;
+        @include flex(column, flex-start, flex-start);
+        gap: 3.5rem;
+
+        @include breakpoint-up(medium) {
+            gap: 4.75rem;
+            flex-flow: row;
+        }
+
+        .links {
+            @include flex(column, flex-start, flex-start);
+            gap: 1.5rem;
+            min-width: 5rem;
+    
+            a:hover {
+                text-decoration: none;
+                font-weight: 800;
+            }
+        }
+
+        .footer-links-2 {
+            padding-bottom: 2.5rem;
+        }
+    }
+
+
+    &-social {
+        grid-area: footer-social;
+        @include flex(row, center, center);
+        gap: 0.6875rem;
+
+        @include breakpoint-up(medium) {
+            align-items: flex-start;
+        }
+
+        @include breakpoint-up(large) {
+
+        }
+
+        a {
+            color: $white;
+            border-radius: 50%;
+            border: 1px solid $white;
+
+            &:hover {
+                color: $cyan;
+                border: 1px solid $cyan;
+            }
+            
+            i {
+                @include flex(column, center, center);
+                height: 2rem;
+                width: 2rem;
+            }
+        }
+    }
+}

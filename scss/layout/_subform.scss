@@ -1,0 +1,70 @@
+.subform-container {
+    min-height: 18.5rem;
+    position: relative;
+
+    .subform {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 54rem;
+        padding: 2.375rem 1.75rem;
+        background-color: $darkBlueTestimonials;
+        border-radius: 0.5rem;
+        text-align: center;
+        box-shadow: 4px 4px 15px rgb(17, 17, 17);
+        
+        @include flex(column, center, center);
+
+        @include breakpoint-up(large) {
+            padding: 3.25rem 4.75rem 2.5rem 4.75rem;
+        }
+
+        h3 {
+            margin-bottom: 1.375rem;
+
+            @include breakpoint-up(medium) {
+                font-size: map-get($fontSizes , xlarge);
+            }
+    
+        }
+
+        p {
+            margin-bottom: 1.875rem;
+            max-width: 38.9rem;
+        }
+
+        &-buttons {
+            position: relative;
+            @include flex(column, center, center);
+            gap: 1.5rem;
+            width: 100%;
+
+            @include breakpoint-up(large) {
+                gap: 3rem;
+                flex-flow: row;
+            }
+
+            input {
+                width: 100%;
+                flex: 1;
+            }
+    
+            button {
+                width: 100%;
+                flex: 0.5;
+            }
+
+            .error {
+                position: absolute;
+                bottom: -20%;
+
+                @include breakpoint-up(large) {
+                    left: 5%;
+                    bottom: -35%;
+                }
+            }
+        }
+    }
+}

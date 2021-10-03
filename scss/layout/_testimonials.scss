@@ -1,0 +1,86 @@
+.testimonials {
+
+    .wrapper {
+        @include flex(column, center, center);
+        gap: 1.3125rem;
+
+        @include breakpoint-up(medium) {
+            flex-flow: row;
+        }
+
+        @include breakpoint-up(medium) {
+            gap: 2.5rem;
+        }
+    }
+
+    .testimonial:first-child {
+        position: relative;
+
+        &:before {
+            content: url('/images/bg-quotes.png');
+            position: absolute;
+            top: -16%;
+            z-index: -1;
+
+            @include breakpoint-up(large) {
+                left: -2%;
+            }
+        }
+    }
+
+    .testimonial {
+        flex: 1;
+        background-color: $darkBlueTestimonials;
+        padding: 1.75rem 1.125rem 1.125rem 1.125rem;
+        border-radius: 0.2rem;
+        display: grid;
+        grid-template-rows: 1fr minmax(1.8rem, max-content);
+        grid-template-columns: minmax(1.8rem, max-content) 1fr;
+        grid-template-areas: 
+        "testimonial-text testimonial-text"
+        "profile-image profile-text";
+        grid-gap: 1.5rem 0.5rem;
+        box-shadow: 8px 4px 8px $darkBlueIntro;
+
+        @include breakpoint-up(large) {
+            padding: 2.625rem 1.5rem 1.5rem 1.5rem;
+        }
+
+        &-text {
+            grid-area: testimonial-text;
+            line-height: 1.8;
+        }
+
+        .profile-image {
+            grid-area: profile-image;
+            align-self: center;
+            height: 1.8rem;
+            width: 1.8rem;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-text {
+            grid-area: profile-text;
+
+            span {
+                display: block;
+                font-family: 'Raleway', sans-serif;
+                letter-spacing: 1px;
+            }
+
+            .person-name {
+                font-weight: 800;
+                font-size: map-get($fontSizes , small-variant);
+                margin-bottom: 0.4rem;
+            }
+
+            .person-position {
+                font-size: map-get($fontSizes , xsmall);
+                font-weight: 400;
+                filter: brightness(0.75);
+            }
+        }
+    }
+
+}

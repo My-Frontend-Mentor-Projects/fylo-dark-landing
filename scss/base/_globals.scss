@@ -1,0 +1,109 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, p, a, span {
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: $white;
+    font-size: map-get($fontSizes, small);
+    background-color: $darkBlueBackground;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    @include breakpoint-up(xlarge) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+h1, h2, h3, button {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: map-get($fontSizes, large);
+    line-height: 1.5;
+
+    @include breakpoint-up(medium) {
+        font-size: map-get($fontSizes, xlarge);
+    }
+}
+
+h2 {
+    font-size: map-get($fontSizes , medium);
+
+    @include breakpoint-up(medium) {
+        font-size: map-get($fontSizes, large);
+        text-align: left;
+    }
+
+    @include breakpoint-up(large) {
+        font-size: map-get($fontSizes, xlarge);
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: map-get($fontSizes, small);
+    line-height: 1.5;
+}
+
+.links a, p {
+    color: $white;
+    filter: brightness(0.75);
+    transition: all 0.3ms ease-in-out;
+}
+
+.links a:hover {
+    filter: brightness(1);
+    text-decoration: underline;
+}
+
+button {
+    font-weight: 700;
+    background-color: $cyan;
+    color: $white;
+    border: none;
+    padding: 1.125rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+button:hover, button:active {
+    filter: brightness(1.1);
+}
+
+input {
+    padding: 1.1rem 1.75rem;
+    border-radius: 2rem;
+    outline: none;
+    border: none;
+}
+
+.error {
+    color: $lightRed;
+    font-size: map-get($fontSizes, xsmall-variant);
+    font-weight: 800;
+}

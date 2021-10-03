@@ -1,0 +1,33 @@
+.header {
+    background-color: $darkBlueIntro;
+    font-family: 'Raleway', sans-serif;
+    
+    .wrapper {
+        padding-top: 1.5rem;
+        @include flex(row, space-between, center);
+
+        @include breakpoint-up (medium) {
+            padding-top: 3.75rem;
+        }
+
+        @include breakpoint-up (xlarge) {
+            padding-top: 5.75rem;
+        }
+    }
+
+    &-logo img{
+        width: 5.25rem;
+    }
+
+    &-links a:not(:last-child){
+        margin-right: 1.5rem;
+
+        @include breakpoint-up (large) {
+            margin-right: 2.375rem;
+        }
+
+        @include breakpoint-up (xlarge) {
+            margin-right: 3.375rem;
+        }
+    }
+}

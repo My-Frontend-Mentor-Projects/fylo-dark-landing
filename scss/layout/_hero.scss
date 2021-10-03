@@ -1,0 +1,54 @@
+.hero {
+    background-color: $darkBlueIntro ;
+    background-image: url('/images/bg-curvy-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: 145% 65%;
+    background-position: 60% 100%;
+
+    @include breakpoint-up(large) {
+        background-image: url('/images/bg-curvy-desktop.svg');
+        background-size: 100% 35%;
+        background-position: 90% 100%;
+    }
+
+    .wrapper {
+        position: relative;
+        max-width: 42.125rem;
+        @include flex(column, center, center);
+    }
+
+    &-image {
+        width: 90%;
+        max-width: 45rem;
+    }
+
+    &-title {
+        margin-top: 2.5rem;
+    }
+
+    &-paragraph {
+        text-align: center;
+        margin-top: 1.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
+        @include breakpoint-up(medium) {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+
+        @include breakpoint-up(large) {
+            padding-left: 8rem;
+            padding-right: 8rem;
+        }
+    }
+
+    &-button {
+        margin-top: 2.25rem;
+        width: 15.125rem;
+
+        @include breakpoint-up(medium) {
+            width: 17.5rem;
+        }
+    }
+}

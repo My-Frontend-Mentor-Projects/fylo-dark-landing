@@ -1,0 +1,31 @@
+.features {
+
+    .wrapper {
+        max-width: 54.75rem;
+        display: grid;
+        grid-auto-flow: row;
+        grid-gap: 5.5rem;
+
+        @include breakpoint-up(medium) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        @include breakpoint-up(large) {
+            grid-gap: 5.875rem 8.5rem;
+        }
+    }
+
+    &-item {
+        text-align: center;
+
+        img {
+            height: 4rem;
+        }
+
+        h3 {
+            margin-top: 2.25rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
