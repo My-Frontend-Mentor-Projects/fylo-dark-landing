@@ -14,11 +14,13 @@
 
     &-image {
         width: 90%;
-        flex: 1;
+
+        @include breakpoint-up(medium) {
+            width: 50%;
+        }
     }
 
     &-text {
-        flex: 1;
 
         *:not(:last-child) {
             margin-bottom: 1.1875rem;

@@ -621,11 +621,12 @@ input {
 
 .info-image {
   width: 90%;
-  flex: 1;
 }
 
-.info-text {
-  flex: 1;
+@media (min-width: 40em) {
+  .info-image {
+    width: 50%;
+  }
 }
 
 .info-text *:not(:last-child) {
