@@ -1,12 +1,12 @@
 .hero {
     background-color: $darkBlueIntro ;
-    background-image: url('/images/bg-curvy-mobile.svg');
+    background-image: url('../images/bg-curvy-mobile.svg');
     background-repeat: no-repeat;
     background-size: 145% 65%;
     background-position: 60% 100%;
 
     @include breakpoint-up(large) {
-        background-image: url('/images/bg-curvy-desktop.svg');
+        background-image: url('../images/bg-curvy-desktop.svg');
         background-size: 100% 35%;
         background-position: 90% 100%;
     }

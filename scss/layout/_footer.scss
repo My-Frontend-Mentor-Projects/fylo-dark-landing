@@ -86,20 +86,20 @@
         }
         
         .location::before {
-            content: url('/images/icon-location.svg');
+            content: url('../images/icon-location.svg');
             position: absolute;
             left: 0;
             top: 0.2rem;
         }
 
         .phone::before {
-            content: url('/images/icon-phone.svg');
+            content: url('../images/icon-phone.svg');
             position: absolute;
             left: 0;
         }
 
         .email::before {
-            content: url('/images/icon-email.svg');
+            content: url('../images/icon-email.svg');
             position: absolute;
             left: 0;
         }

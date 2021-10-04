@@ -502,7 +502,7 @@ input {
 
 .hero {
   background-color: #1c2431;
-  background-image: url("/images/bg-curvy-mobile.svg");
+  background-image: url("../images/bg-curvy-mobile.svg");
   background-repeat: no-repeat;
   background-size: 145% 65%;
   background-position: 60% 100%;
@@ -510,7 +510,7 @@ input {
 
 @media (min-width: 64em) {
   .hero {
-    background-image: url("/images/bg-curvy-desktop.svg");
+    background-image: url("../images/bg-curvy-desktop.svg");
     background-size: 100% 35%;
     background-position: 90% 100%;
   }
@@ -692,7 +692,7 @@ input {
 }
 
 .testimonials .testimonial:first-child:before {
-  content: url("/images/bg-quotes.png");
+  content: url("../images/bg-quotes.png");
   position: absolute;
   top: -16%;
   z-index: -1;
@@ -931,20 +931,20 @@ input {
 }
 
 .footer-contact .location::before {
-  content: url("/images/icon-location.svg");
+  content: url("../images/icon-location.svg");
   position: absolute;
   left: 0;
   top: 0.2rem;
 }
 
 .footer-contact .phone::before {
-  content: url("/images/icon-phone.svg");
+  content: url("../images/icon-phone.svg");
   position: absolute;
   left: 0;
 }
 
 .footer-contact .email::before {
-  content: url("/images/icon-email.svg");
+  content: url("../images/icon-email.svg");
   position: absolute;
   left: 0;
 }
